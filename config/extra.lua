@@ -23,12 +23,12 @@ vim.api.nvim_create_user_command('ToggleDefinition', toggle_definition, {})
 if string.match(vim.loop.os_uname().release, 'WSL2') then
   vim.g.clipboard = {
     copy = {
-      ['+'] = 'win32yank.exe -i --crlf',
-      ['*'] = 'win32yank.exe -i --crlf',
+      ['+'] = 'win32yank -i --crlf',
+      ['*'] = 'win32yank -i --crlf',
     },
     paste = {
-      ['+'] = 'win32yank.exe -o --lf',
-      ['*'] = 'win32yank.exe -o --lf',
+      ['+'] = 'win32yank -o --lf',
+      ['*'] = 'win32yank -o --lf',
     },
   }
 end
